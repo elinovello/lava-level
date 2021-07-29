@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // menu hamburguesa
     const burgerMenuBtn = document.querySelector('#burger-menu-button')
 
     burgerMenuBtn.addEventListener('click', function() {
@@ -7,20 +8,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    
-
     var prevScrollpos = window.pageYOffset;
+    const navbarTag = document.getElementById("navbar");
     
     window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
+            navbarTag.style.top = "0";
+            navbarTag.style.transform = "all 0.3s";
         } else {
-            document.getElementById("navbar").style.top = "-10vh";
+            navbarTag.style.top = "-10vh";
+            navbarTag.style.transform = "all 0.3s";
+
         }
          prevScrollpos = currentScrollPos;
     }
 
+    window.addEventListener('scroll', function(){
+        const header = document.querySelector("header");
+        header.classList.toggle("scrolled", window.scrollY > 0);
+    });
+
+    //slideshow images
     const slideshowImages = document.querySelectorAll(".slideshow")
     const nextImageDelay = 3000;    
     let currentImageCounter = 0; 
@@ -34,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
         currentImageCounter = (currentImageCounter + 1) % slideshowImages.length;
         slideshowImages[currentImageCounter].style.opacity = 1;
     }
+
+    
 
 
 });

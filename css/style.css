@@ -43,7 +43,8 @@ a {
 
 .portfolio-card,
 .socials,
-ul.main-menu {
+ul.main-menu,
+#buttonUp {
     display:none;
 }
 
@@ -89,7 +90,7 @@ h1 {
     font-size:20px;
 }
 
-/* menu anvorgesa */
+/* menu hamburguesa */
 
 #burger-menu-button {
     background: transparent;
@@ -157,7 +158,6 @@ body.mobile-menu-active ul.main-menu {
 .menu-item a {
     color:black;
 }
-
 
 
 /* logo header */
@@ -318,6 +318,11 @@ section#comisiones > .comisiones-text-wrap {
 
 /* footer */
 
+footer {
+    position:relative;
+    bottom:0;
+}
+
 .footer-links-wrap {
     background: black;
     display:flex;
@@ -351,13 +356,50 @@ footer > small {
     box-shadow: 0px 3px 5px white;
 }
 
+/* PÁGINA ABOUT */
+
+body#about header {
+    min-height: 30vh;
+}
+
+body#about section#about {
+    width:85%;
+    background:#fff;
+    padding:1.5rem;
+    border:3px solid #F2B1E9;
+    box-shadow: 0 0 0 8px black;
+    margin:4rem auto;
+    text-align: center;
+}
+
+body#about section#about #avi {
+    position: relative;
+    width:50vw;
+    padding:1px;
+    border: 8px solid black;
+    border-radius:50%;
+    background: #F2B1E9;
+    margin-top: -8.3rem;
+}
+
+body#about section#about h2 {
+    font-size:2rem;
+    padding: 0rem 0rem 1rem 0rem;
+}
 
 
 
 
 
+
+
+
+
+/* DESKTOP */
 
 @media (min-width: 768px) {
+
+    
 
     /* header y barra de navegación */
 
@@ -402,6 +444,8 @@ footer > small {
         justify-content: start;
         align-items: center;
         width:20%;
+        opacity: 1;
+        transition: all 400ms ease-in-out;
     }
     
     .portfolio-avi {
@@ -430,8 +474,7 @@ footer > small {
         visibility: visible;
         opacity: 0;
         transition: visibility 0s, opacity 0.2s ease-in-out;
-        
-    
+
     }
 
     div.portfolio-card-wrap:hover > * {
@@ -484,7 +527,7 @@ footer > small {
         box-shadow:none;
         opacity:1;
         visibility: visible;
-        transition:none;
+        transition: all 400ms ease-in-out;
     }
 
     #burger-menu-button {
@@ -492,7 +535,7 @@ footer > small {
     }
 
     .menu-item {
-        padding: 0.5rem 0.3rem 0rem; 
+        padding: 0.5rem 0rem 0rem; 
         font-size:13px;
         background:none;
         width:initial;
@@ -525,6 +568,31 @@ footer > small {
     .socials a:hover {
         color:#2551E1;
     }
+
+    /* navbar scrolled */
+
+    header.scrolled #navbar {
+        transition: all 400ms ease-in-out;
+        z-index: 10;
+    }
+
+    header.scrolled #navbar .portfolio-card {
+        opacity:0;
+        transition: all 400ms ease-in-out;
+    }
+
+    header.scrolled #navbar .socials {
+        opacity:0;
+        transition: all 400ms ease-in-out;
+    }
+
+    header.scrolled #navbar .site-title ul {
+        padding-top: 1.6rem;
+        transition: all 400ms ease-in-out;
+        
+    }
+
+
 
     /* logo de la portada */
 
