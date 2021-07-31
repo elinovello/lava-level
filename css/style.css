@@ -84,6 +84,7 @@ header {
    width:100%;
     display:flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
@@ -148,7 +149,7 @@ body.mobile-menu-active ul.main-menu {
     width:100%;
     background:white;
     height:100%;
-    padding:1.3rem 1.3rem;
+    padding:1.3rem;
 }
 
 .menu-item:not(.menu-item:last-child) {
@@ -356,13 +357,32 @@ footer > small {
     box-shadow: 0px 3px 5px white;
 }
 
+/* PÁGINA ILUSTRACIONES */
+
+body#ilustraciones header {
+    background: url('../img/example5.png') center top no-repeat;
+}
+
+body#ilustraciones a h2,
+body#comisiones a h2 {
+    font-size:2rem;
+    max-width:100%;
+}
+
+/* PÁGINA COMISIONES */
+
+body#comisiones header {
+    background: url('../img/example9.png');
+    background-size:cover;
+}
+
 /* PÁGINA ABOUT */
 
 body#about header {
     min-height: 30vh;
 }
 
-body#about section#about {
+body#about section {
     width:85%;
     background:#fff;
     padding:1.5rem;
@@ -370,6 +390,7 @@ body#about section#about {
     box-shadow: 0 0 0 8px black;
     margin:4rem auto;
     text-align: center;
+    border-radius: 3px;
 }
 
 body#about section#about #avi {
@@ -382,10 +403,21 @@ body#about section#about #avi {
     margin-top: -8.3rem;
 }
 
-body#about section#about h2 {
+body#about section h2 {
     font-size:2rem;
     padding: 0rem 0rem 1rem 0rem;
+    color: black;
 }
+
+body#about section.inspiraciones {
+    margin-top: 7rem;
+}
+
+body#about section.inspiraciones p {
+    padding-bottom: 1rem;
+}
+
+
 
 
 
@@ -483,14 +515,14 @@ body#about section#about h2 {
     }
 
     div.portfolio-card-wrap p:only-of-type {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     div.portfolio-card-wrap h2:only-of-type {
-        font-size:12px;
+        font-size:10px;
         font-weight:100;
         display:inline-block;
-        margin-top: -15px;
+        margin-top: -12px;
     }
 
     /* navegación y título principal */
@@ -688,5 +720,81 @@ body#about section#about h2 {
     .footer-links a:hover {
         color:#2551E1;
     }
+
+    /* PÁGINA ILUSTRACIONES */
+
+    body#ilustraciones header {
+        background-size:cover;
+        background-position: center top;
+    }
+
+    body#ilustraciones a h2,
+    body#comisiones a h2 {
+        font-size: 4rem;
+    }
+
+    /* PÁGINA COMISIONES */
+
+    body#comisiones header {
+        background-size:cover;
+        background-position: center left;
+    }
+
+    /* PÁGINA ABOUT */
+
+    body#about header {
+        min-height: 40vh;
+    }
+
+    body#about section {
+        width:70%;
+        display:block;
+
+    }
+
+    body#about section#about #avi {
+        width: 20vw;
+        position:relative;
+        margin-top: -10rem;
+        float:left;
+        word-wrap: break-word;
+        shape-outside: circle(10rem at 40% 0%) margin-box;
+    }
+
+    body#about section#about h2 {
+        position:absolute;
+        margin-top: -7rem;
+        margin-left:20rem;
+        font-size: 4rem;
+    }
+
+    body#about section#about p {
+        padding:0.5rem;
+    }
+
+    /* section inspiraciones */
+
+    body#about section.inspiraciones {
+        margin-top: 7rem;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    body#about section.inspiraciones div.insp-text-wrap {
+        width:100%;
+    }
+
+    body#about section.inspiraciones div.insp-text-wrap p {
+        padding:0rem 2rem 1rem 1rem;
+    }
+
+    body#about section.inspiraciones div.insp-text-wrap h2 {
+        color:black;
+        font-size: 3rem;
+    }
+
+    
+
 
 }
